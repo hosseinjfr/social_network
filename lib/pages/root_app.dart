@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
+import 'package:social_network/pages/chat_page.dart';
 import 'package:social_network/pages/home_page.dart';
+import 'package:social_network/pages/profile_page.dart';
+import 'package:social_network/pages/saved_page.dart';
 import 'package:social_network/theme/colors.dart';
 import 'dart:math' as math;
 
@@ -28,18 +31,12 @@ class _RootAppState extends State<RootApp> {
       index: activeTab,
       children: [
         HomePage(),
-        Center(
-          child: Text('Chat'),
-        ),
+        ChatPage(),
         Center(
           child: Text('Upload'),
         ),
-        Center(
-          child: Text('Saved'),
-        ),
-        Center(
-          child: Text('Profile'),
-        ),
+        SavedPage(),
+        ProfilePage(),
       ],
     );
   }
