@@ -27,11 +27,25 @@ class _RootAppState extends State<RootApp> {
             color: Colors.grey.withOpacity(0.3),
             spreadRadius: 1,
             blurRadius: 20,
-            offset: Offset(0, 1),
+            offset: const Offset(0, 1),
           ),
         ],
         borderRadius: BorderRadius.circular(20),
         color: white,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Icon(
+              Icons.home_filled,
+              size: 25,
+              color: activeTab == 0 ? primary : black,
+            ),
+          ],
+        ),
       ),
     );
   }
